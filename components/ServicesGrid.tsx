@@ -1,8 +1,8 @@
 
 import React, { Suspense, lazy, useState } from 'react';
-import { useApp } from '../App';
+import { useApp } from '../App.tsx';
 
-const ServiceIcon3D = lazy(() => import('./ServiceIcon3D'));
+const ServiceIcon3D = lazy(() => import('./ServiceIcon3D.tsx'));
 
 const ServicesGrid: React.FC = () => {
   const { t, theme, lang, setIsBookingOpen } = useApp();
