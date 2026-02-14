@@ -1,15 +1,14 @@
-
 import React, { Suspense, lazy, useState } from 'react';
-import { useApp } from '../App.tsx';
+import { useApp } from '../App';
 
-const ServiceIcon3D = lazy(() => import('./ServiceIcon3D.tsx'));
+const ServiceIcon3D = lazy(() => import('./ServiceIcon3D'));
 
 const ServicesGrid: React.FC = () => {
   const { t, theme, lang, setIsBookingOpen } = useApp();
   const [hoveredId, setHoveredId] = useState<string | null>(null);
 
   const formatPrice = (p: string) => {
-    if (lang === 'en') return p; // English numerals
+    if (lang === 'en') return p;
     const arabicNumerals = ['٠','١','٢','٣','٤','٥','٦','٧','٨','٩'];
     return p.split('').map(char => isNaN(parseInt(char)) ? char : arabicNumerals[parseInt(char)]).join('');
   };
@@ -67,13 +66,7 @@ const ServicesGrid: React.FC = () => {
                   : 'from-blue-100/60 via-blue-50/10 to-transparent'
               }`}></div>
 
-              <div className={`absolute top-0 ${lang === 'ar' ? 'left-0' : 'right-0'} w-2 h-full bg-blue-600 transform ${lang === 'ar' ? '-translate-x-full' : 'translate-x-full'} group-hover:translate-x-0 transition-transform duration-500 z-30`}></div>
-              
               <div className="mb-6 flex justify-center relative">
-                <div className={`absolute inset-0 blur-3xl rounded-full opacity-0 group-hover:opacity-100 group-hover:animate-pulse transition-opacity duration-700 ${
-                  theme === 'dark' ? 'bg-blue-500/30' : 'bg-blue-400/20'
-                }`}></div>
-                
                 <Suspense fallback={<div className="w-24 h-24 bg-slate-200 animate-pulse rounded-full" />}>
                   <ServiceIcon3D type={service.icon} theme={theme} isHovered={hoveredId === service.id} />
                 </Suspense>
