@@ -1,8 +1,7 @@
-
 import React, { useState, Suspense, lazy } from 'react';
-import { useApp } from '../App.tsx';
+import { useApp } from '../App';
 
-const Scene3D = lazy(() => import('./Scene3D.tsx'));
+const Scene3D = lazy(() => import('./Scene3D'));
 
 const Hero: React.FC = () => {
   const [isSubmitted, setIsSubmitted] = useState(false);
