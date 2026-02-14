@@ -1,20 +1,20 @@
 
 import React, { useState, useEffect, createContext, useContext } from 'react';
-import Header from './components/Header.tsx';
-import Hero from './components/Hero.tsx';
-import SocialProof from './components/SocialProof.tsx';
-import ServicesGrid from './components/ServicesGrid.tsx';
-import WhyUs from './components/WhyUs.tsx';
-import PricingComparison from './components/PricingComparison.tsx';
-import PricingPackages from './components/PricingPackages.tsx';
-import HowItWorks from './components/HowItWorks.tsx';
-import AppDownload from './components/AppDownload.tsx';
-import Testimonials from './components/Testimonials.tsx';
-import FAQ from './components/FAQ.tsx';
-import FinalCTA from './components/FinalCTA.tsx';
-import Footer from './components/Footer.tsx';
-import StickyMobileCTA from './components/StickyMobileCTA.tsx';
-import { translations } from './translations.ts';
+import Header from './components/Header';
+import Hero from './components/Hero';
+import SocialProof from './components/SocialProof';
+import ServicesGrid from './components/ServicesGrid';
+import WhyUs from './components/WhyUs';
+import PricingComparison from './components/PricingComparison';
+import PricingPackages from './components/PricingPackages';
+import HowItWorks from './components/HowItWorks';
+import AppDownload from './components/AppDownload';
+import Testimonials from './components/Testimonials';
+import FAQ from './components/FAQ';
+import FinalCTA from './components/FinalCTA';
+import Footer from './components/Footer';
+import StickyMobileCTA from './components/StickyMobileCTA';
+import { translations } from './translations';
 
 type Language = 'ar' | 'en';
 type Theme = 'light' | 'dark';
