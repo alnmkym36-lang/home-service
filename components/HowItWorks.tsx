@@ -30,19 +30,6 @@ const HowItWorks: React.FC = () => {
             </div>
           ))}
         </div>
-        
-        <div className={`mt-20 p-8 rounded-3xl border shadow-lg flex flex-col md:flex-row items-center gap-6 max-w-3xl mx-auto transition-colors ${theme === 'dark' ? 'bg-slate-800 border-slate-700' : 'bg-white border-slate-100'}`}>
-          <div className="w-20 h-20 bg-green-100 dark:bg-green-900/30 rounded-full flex items-center justify-center text-4xl animate-bounce">
-            🔔
-          </div>
-          <div className="text-right flex-1">
-            <h4 className={`text-xl font-bold mb-1 transition-colors ${theme === 'dark' ? 'text-white' : 'text-slate-900'}`}>{t.howItWorks.notifTitle}</h4>
-            <p className="text-slate-500 dark:text-slate-400">{t.howItWorks.notifDesc}</p>
-          </div>
-          <div className="bg-blue-600 text-white text-xs font-bold px-4 py-2 rounded-full">
-            {t.howItWorks.track}
-          </div>
-        </div>
       </div>
     </section>
   );

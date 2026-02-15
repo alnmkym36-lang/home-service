@@ -1,3 +1,4 @@
+
 import React, { Suspense, lazy, useState } from 'react';
 import { useApp } from '../App';
 
@@ -25,6 +26,7 @@ const ServicesGrid: React.FC = () => {
   ];
 
   const handleServiceClick = () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
     setIsBookingOpen(true);
   };
 

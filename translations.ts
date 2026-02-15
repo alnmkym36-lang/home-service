@@ -152,7 +152,10 @@ export const translations = {
       services: "الخدمات",
       links: "روابط هامة",
       contact: "تواصل معنا",
-      rights: "كل الحقوق محفوظة"
+      rights: "كل الحقوق محفوظة",
+      privacyTitle: "سياسة الخصوصية وحماية البيانات",
+      privacyText: "نحن في HomeServe Pro نلتزم بحماية خصوصيتك بشكل كامل. جميع البيانات التي تشاركها معنا (الاسم، العنوان، رقم الهاتف) تستخدم حصرياً لغرض تقديم خدمة الصيانة ولا يتم مشاركتها أو بيعها لأي طرف ثالث. نستخدم تقنيات تشفير متطورة (SSL) لضمان أمان معلوماتك أثناء الدفع والتصفح.",
+      privacyLink: "سياسة الخصوصية"
     }
   },
   en: {
@@ -307,7 +310,10 @@ export const translations = {
       services: "Services",
       links: "Important Links",
       contact: "Contact Us",
-      rights: "All rights reserved"
+      rights: "All rights reserved",
+      privacyTitle: "Privacy Policy & Data Protection",
+      privacyText: "At HomeServe Pro, we are strictly committed to your privacy. All data shared (Name, Address, Phone) is used solely for service delivery and is never sold to third parties. We use advanced encryption (SSL) to ensure your data security.",
+      privacyLink: "Privacy Policy"
     }
   }
 };
