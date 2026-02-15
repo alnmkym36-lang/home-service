@@ -5,9 +5,13 @@ export default defineConfig({
   plugins: [react()],
   build: {
     outDir: 'dist',
-    sourcemap: false
-  },
-  server: {
-    port: 3000,
+    sourcemap: false,
+    rollupOptions: {
+      output: {
+        manualChunks: {
+          vendor: ['react', 'react-dom', 'three']
+        }
+      }
+    }
   }
 });
