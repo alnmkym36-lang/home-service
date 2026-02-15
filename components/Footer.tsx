@@ -59,7 +59,14 @@ const Footer: React.FC = () => {
               <li><a href="#booking" onClick={(e) => { e.preventDefault(); window.scrollTo({top:0, behavior:'smooth'}); }} className="hover:text-white transition-colors">{t.nav.book}</a></li>
               <li><a href="#why-us" onClick={(e) => handleScrollToSection(e, 'why-us')} className="hover:text-white transition-colors">{t.nav.whyUs}</a></li>
               <li><a href="#pricing" onClick={(e) => handleScrollToSection(e, 'pricing')} className="hover:text-white transition-colors">{t.nav.pricing}</a></li>
-              <li><a href="#privacy" onClick={togglePrivacy} className="hover:text-white transition-colors cursor-pointer">{t.footer.privacyLink}</a></li>
+              <li>
+                <button 
+                  onClick={togglePrivacy} 
+                  className="hover:text-white transition-colors flex items-center gap-2 text-slate-400"
+                >
+                  <span>{showPrivacy ? '−' : '+'}</span> {t.footer.privacyLink}
+                </button>
+              </li>
             </ul>
           </div>
 
@@ -91,7 +98,7 @@ const Footer: React.FC = () => {
               <div id="privacy-content" className="mb-6 p-6 rounded-2xl bg-white/5 border border-white/10 animate-in fade-in slide-in-from-bottom-4 duration-500">
                   <div className="flex justify-between items-start mb-4">
                     <h5 className="text-white font-bold text-lg">{t.footer.privacyTitle}</h5>
-                    <button onClick={() => setShowPrivacy(false)} className="text-slate-400 hover:text-white transition-colors text-2xl leading-none">&times;</button>
+                    <button onClick={() => setShowPrivacy(false)} className="text-slate-400 hover:text-white transition-colors text-2xl leading-none" title="إغلاق">&times;</button>
                   </div>
                   <p className="text-slate-400 text-sm leading-relaxed">{t.footer.privacyText}</p>
               </div>
